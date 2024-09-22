@@ -3,6 +3,29 @@ function getElement(ID) {
   return document.getElementById(ID);
 }
 
+function getElementInnerText(ID) {
+  return parseInt(document.getElementById(ID).innerText);
+}
+
+function getInputValue(ID) {
+  return parseInt(document.getElementById(ID).value);
+}
+
+// check input validity
+function checkInputIsValid(ID) {
+  if (getInputValue(ID) <= 0 || isNaN(getInputValue(ID) <= 0)) {
+    return false;
+  }
+  return true;
+}
+
+//  --------------------------------------------------------------------------
+// Home to Blog
+getElement("blog-btn").addEventListener("click", function () {
+  window.location.href = "./blog.html";
+});
+
+// tab switching from Donation to History & History to Donation
 const btns = document.querySelectorAll(".tab-btns button");
 for (const EveryBtn of btns) {
   EveryBtn.addEventListener("click", function (e) {
@@ -16,3 +39,7 @@ for (const EveryBtn of btns) {
     );
   });
 }
+
+// Assigning variable to frequently use
+const totalBalance = getElementInnerText("total-balance");
+console.log(totalBalance);

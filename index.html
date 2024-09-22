@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
+    <!-- daisyui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- custom CSS -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
@@ -44,7 +50,10 @@
       <nav class="p-3 bg-[#ffffff0c]">
         <!-- nav container -->
         <div class="container mx-auto flex justify-between items-center">
-          <button class="bg-light py-2 px-5 rounded-md text-dark font-bold">
+          <button
+            class="bg-light py-2 px-5 rounded-md text-dark font-bold"
+            id="blog-btn"
+          >
             Blog
           </button>
           <div class="flex items-center gap-3 cursor-pointer">
@@ -84,9 +93,9 @@
       <!-- donation details starts here -->
       <section id="donation-details" class="space-y-5">
         <div
-          class="flex flex-col md:flex-row items-center gap-5 border-2 border-[#ffffff33] p-3 rounded-md"
+          class="flex flex-col md:flex-row items-stretch lg:items-center gap-5 border-2 border-[#ffffff33] p-3 rounded-md"
         >
-          <div class="flex-1">
+          <div class="flex-1 rounded-md overflow-hidden">
             <img
               src="./assets/noakhali.png"
               alt=""
@@ -122,9 +131,9 @@
           </div>
         </div>
         <div
-          class="flex flex-col md:flex-row items-center gap-5 border-2 border-[#ffffff33] p-3 rounded-md"
+          class="flex flex-col md:flex-row items-stretch lg:items-center gap-5 border-2 border-[#ffffff33] p-3 rounded-md"
         >
-          <div class="flex-1">
+          <div class="flex-1 rounded-md overflow-hidden">
             <img
               src="./assets/feni.png"
               alt=""
@@ -160,9 +169,9 @@
           </div>
         </div>
         <div
-          class="flex flex-col md:flex-row items-center gap-5 border-2 border-[#ffffff33] p-3 rounded-md"
+          class="flex flex-col md:flex-row items-stretch lg:items-center gap-5 border-2 border-[#ffffff33] p-3 rounded-md"
         >
-          <div class="flex-1">
+          <div class="flex-1 rounded-md overflow-hidden">
             <img
               src="./assets/quota-protest.png"
               alt=""
@@ -242,6 +251,9 @@
     <footer class="bg-[#ffffff0c] p-6">
       <p class="text-center">© September 2024, Mahfuz, All Rights Reserved</p>
     </footer>
+    <!-- Daisyui JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Raw JS -->
     <script src="./script.js"></script>
   </body>
 </html>
