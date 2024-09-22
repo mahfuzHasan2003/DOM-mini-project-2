@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .initial {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <button id="btn3">Button 3</button>
+    <button id="btn4">Button 4</button>
+
+    <script>
+      document.getElementById("btn1").classList.add("initial");
+      const buttons = document.querySelectorAll("button");
+      for (const btn of buttons) {
+        btn.addEventListener("click", (e) => {
+          for (const i of buttons) {
+            i.classList.remove("initial");
+          }
+          e.target.classList.add("initial");
+        });
+      }
+    </script>
+  </body>
+</html>
