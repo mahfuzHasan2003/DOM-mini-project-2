@@ -4,29 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .initial {
-        background-color: aquamarine;
+      .button-active {
+        border-bottom: 1px solid brown;
+        background-color: #9999;
       }
     </style>
   </head>
   <body>
-    <button id="btn1">Button 1</button>
-    <button id="btn2">Button 2</button>
-    <button id="btn3">Button 3</button>
-    <button id="btn4">Button 4</button>
+    <button class="text-xl p-3 button-active" id="home">Home</button>
+    <button class="text-xl px-5 py-2" id="contact">Contact</button>
+
+    <p class="home-details">
+      Home Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+      quae asperiores ducimus hic nobis, ratione quasi quia deleniti sint
+      doloremque odit unde perspiciatis, dicta nisi nesciunt atque consequatur
+      sit! Quas reiciendis, qui doloremque veniam ipsa ex nemo sapiente eius
+      odit magni cumque id laudantium, voluptas cum placeat explicabo, pariatur
+      debitis eveniet quo! Quam consequuntur blanditiis, architecto voluptas
+      quas corporis iste maxime soluta facilis omnis fugiat minus id perferendis
+      aperiam est. Quae ipsum, delectus cum dolores voluptates exercitationem
+      nisi, qui alias quam molestias iusto reprehenderit quidem. Aliquam optio
+      dolor quo! Similique maiores porro modi ea nesciunt rem hic et quam
+      expedita?
+    </p>
+    <p class="contact-details">
+      Contact Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+      quae asperiores ducimus hic nobis, ratione quasi quia deleniti sint
+      doloremque odit unde perspiciatis, dicta nisi nesciunt atque consequatur
+      sit! Quas reiciendis, qui doloremque veniam ipsa ex nemo sapiente eius
+      odit magni cumque id laudantium, voluptas cum placeat explicabo, pariatur
+      debitis eveniet quo! Quam consequuntur blanditiis, architecto voluptas
+      quas corporis iste maxime soluta facilis omnis fugiat minus id perferendis
+      aperiam est. Quae ipsum, delectus cum dolores voluptates exercitationem
+      nisi, qui alias quam molestias iusto reprehenderit quidem. Aliquam optio
+      dolor quo! Similique maiores porro modi ea nesciunt rem hic et quam
+      expedita?
+    </p>
 
     <script>
-      document.getElementById("btn1").classList.add("initial");
-      const buttons = document.querySelectorAll("button");
-      for (const btn of buttons) {
-        btn.addEventListener("click", (e) => {
-          for (const i of buttons) {
-            i.classList.remove("initial");
-          }
-          e.target.classList.add("initial");
-        });
+      function getElement(ID) {
+        return document.getElementById(ID);
       }
+      getElement("contact").addEventListener("click", function () {
+        getElement("home").classList.remove("button-active");
+        getElement("contact").classList.add("button-active");
+      });
     </script>
   </body>
 </html>

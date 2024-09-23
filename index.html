@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
-    <!-- daisyui cdn -->
+    <!-- ----------------daisyui cdn------------ -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
-    <!-- custom CSS -->
+    <!-- ------------------------custom CSS------------------------- -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
       body {
@@ -45,6 +45,7 @@
     </script>
   </head>
   <body class="bg-dark text-white min-h-screen">
+    <!-- --------------------STARTS : header-------------------------------- -->
     <header class="sticky top-0 backdrop-blur-sm">
       <!-- ---------------------------------------------------------------- -->
       <nav class="p-3 bg-[#ffffff0c]">
@@ -56,7 +57,7 @@
           >
             Blog
           </button>
-          <div class="flex items-center gap-3 cursor-pointer">
+          <div class="hidden md:flex items-center gap-3 cursor-pointer">
             <img src="./assets/logo.png" alt="" />
             <h4 class="font-bold">Donate Bangladesh</h4>
           </div>
@@ -84,10 +85,10 @@
       <!-- button group ends here  -->
       <!-- ---------------------------------------------------------------- -->
     </header>
-    <!-- ---------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------- -->
+    <!-- --------------------ENDS : header-------------------------------- -->
 
-    <main class="py-32 container mx-auto">
+    <!-- --------------------STARTS : main-------------------------------- -->
+    <main class="container mx-auto p-3 md:py-20 md:px-0">
       <!-- ---------------------------------------------------------------- -->
       <!-- ---------------------------------------------------------------- -->
       <!-- donation details starts here -->
@@ -126,6 +127,9 @@
               />
               <p class="invalid-warning text-xs text-orange-400 hidden">
                 ⚠️ Uhuu Murubbi, uhu uhu!!
+              </p>
+              <p class="insufficient-balance text-xs text-orange-400 hidden">
+                ⚠️ You don't have enough balance!!
               </p>
             </div>
             <input
@@ -170,6 +174,9 @@
               <p class="invalid-warning text-xs text-orange-400 hidden">
                 ⚠️ Uhuu Murubbi, uhu uhu!!
               </p>
+              <p class="insufficient-balance text-xs text-orange-400 hidden">
+                ⚠️ You don't have enough balance!!
+              </p>
             </div>
             <input
               type="button"
@@ -213,6 +220,9 @@
               <p class="invalid-warning text-xs text-orange-400 hidden">
                 ⚠️ Uhuu Murubbi, uhu uhu!!
               </p>
+              <p class="insufficient-balance text-xs text-orange-400 hidden">
+                ⚠️ You don't have enough balance!!
+              </p>
             </div>
             <input
               type="button"
@@ -231,7 +241,7 @@
         id="modal"
       >
         <div
-          class="w-full max-w-md space-y-4 text-center bg-dark py-10 px-20 rounded-lg"
+          class="w-full max-w-md space-y-4 text-center bg-dark rounded-lg p-12 md:px-16 md:py-12"
         >
           <h1 class="text-5xl font-black mb-4">Congrates</h1>
           <img src="./assets/coin.png" alt="" class="mx-auto" />
@@ -252,12 +262,20 @@
       <!-- history details ends here -->
       <!-- ---------------------------------------------------------------- -->
     </main>
-    <!-- ---------------------------------------------------------------- -->
-    <!-- ---------------------------------------------------------------- -->
+    <!-- --------------------ENDS : main------------------------------ -->
 
-    <footer class="bg-[#ffffff0c] p-6">
+    <!-- --------------------STARTS : footer-------------------------------- -->
+    <footer class="bg-[#ffffff0c] p-6 space-y-2">
+      <div
+        class="flex md:hidden items-center gap-3 cursor-pointer justify-center"
+      >
+        <img src="./assets/logo.png" alt="" />
+        <h4 class="font-bold">Donate Bangladesh</h4>
+      </div>
       <p class="text-center">© September 2024, Mahfuz, All Rights Reserved</p>
     </footer>
+    <!-- --------------------ENDS : footer-------------------------------- -->
+
     <!-- Daisyui JS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom Raw JS -->
