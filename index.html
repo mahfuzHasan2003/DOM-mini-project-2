@@ -44,7 +44,7 @@
       };
     </script>
   </head>
-  <body class="bg-dark text-white">
+  <body class="bg-dark text-white min-h-screen">
     <header class="sticky top-0 backdrop-blur-sm">
       <!-- ---------------------------------------------------------------- -->
       <nav class="p-3 bg-[#ffffff0c]">
@@ -87,7 +87,7 @@
     <!-- ---------------------------------------------------------------- -->
     <!-- ---------------------------------------------------------------- -->
 
-    <main class="my-32 container mx-auto">
+    <main class="py-32 container mx-auto">
       <!-- ---------------------------------------------------------------- -->
       <!-- ---------------------------------------------------------------- -->
       <!-- donation details starts here -->
@@ -105,9 +105,9 @@
           <div class="flex-1 space-y-3">
             <button class="flex gap-2 p-3 bg-[#ffffff0c] rounded-md">
               <img src="./assets/coin.png" alt="" />
-              <span id="donated-amount"> 1023</span> BDT
+              <span class="donated-amount"> 1023</span> BDT
             </button>
-            <h4 class="font-bold text-xl">
+            <h4 class="donation-title font-bold text-xl">
               Donate for Flood at Noakhali, Bangladesh
             </h4>
             <p>
@@ -118,15 +118,20 @@
               supporting the relief efforts and making a positive impact on the
               lives of those in need.
             </p>
-            <input
-              type="text"
-              placeholder="Write Donation Amount"
-              class="w-full p-2 bg-transparent border-2 border-[#ffffff33] rounded-md"
-            />
+            <div class="space-y-1">
+              <input
+                type="text"
+                placeholder="Write Donation Amount"
+                class="donation-amount w-full p-2 bg-transparent border-2 border-[#ffffff33] rounded-md"
+              />
+              <p class="invalid-warning text-xs text-orange-400 hidden">
+                ⚠️ Uhuu Murubbi, uhu uhu!!
+              </p>
+            </div>
             <input
               type="button"
               value="Donate Now"
-              class="text-center w-full bg-light text-dark font-bold p-2 rounded-md"
+              class="donate-now-btn text-center w-full bg-light text-dark font-bold p-2 rounded-md"
             />
           </div>
         </div>
@@ -143,10 +148,10 @@
           <div class="flex-1 space-y-3">
             <button class="flex gap-2 p-3 bg-[#ffffff0c] rounded-md">
               <img src="./assets/coin.png" alt="" />
-              <span id="donated-amount"> 9999</span> BDT
+              <span class="donated-amount"> 9999</span> BDT
             </button>
-            <h4 class="font-bold text-xl">
-              Donate for Flood Relief in Feni,Bangladeshh
+            <h4 class="donation-title font-bold text-xl">
+              Donate for Flood Relief in Feni, Bangladesh
             </h4>
             <p>
               The recent floods in Noakhali have caused significant damage to
@@ -156,15 +161,20 @@
               supporting the relief efforts and making a positive impact on the
               lives of those in need.
             </p>
-            <input
-              type="text"
-              placeholder="Write Donation Amount"
-              class="w-full p-2 bg-transparent border-2 border-[#ffffff33] rounded-md"
-            />
+            <div class="space-y-1">
+              <input
+                type="text"
+                placeholder="Write Donation Amount"
+                class="donation-amount w-full p-2 bg-transparent border-2 border-[#ffffff33] rounded-md"
+              />
+              <p class="invalid-warning text-xs text-orange-400 hidden">
+                ⚠️ Uhuu Murubbi, uhu uhu!!
+              </p>
+            </div>
             <input
               type="button"
               value="Donate Now"
-              class="text-center w-full bg-light text-dark font-bold p-2 rounded-md"
+              class="donate-now-btn text-center w-full bg-light text-dark font-bold p-2 rounded-md"
             />
           </div>
         </div>
@@ -181,9 +191,9 @@
           <div class="flex-1 space-y-3">
             <button class="flex gap-2 p-3 bg-[#ffffff0c] rounded-md">
               <img src="./assets/coin.png" alt="" />
-              <span id="donated-amount"> 24107</span> BDT
+              <span class="donated-amount"> 24107</span> BDT
             </button>
-            <h4 class="font-bold text-xl">
+            <h4 class="donation-title font-bold text-xl">
               Aid for Injured in the Quota Movement
             </h4>
             <p>
@@ -194,15 +204,20 @@
               supporting the relief efforts and making a positive impact on the
               lives of those in need.
             </p>
-            <input
-              type="text"
-              placeholder="Write Donation Amount"
-              class="w-full p-2 bg-transparent border-2 border-[#ffffff33] rounded-md"
-            />
+            <div class="space-y-1">
+              <input
+                type="text"
+                placeholder="Write Donation Amount"
+                class="donation-amount w-full p-2 bg-transparent border-2 border-[#ffffff33] rounded-md"
+              />
+              <p class="invalid-warning text-xs text-orange-400 hidden">
+                ⚠️ Uhuu Murubbi, uhu uhu!!
+              </p>
+            </div>
             <input
               type="button"
               value="Donate Now"
-              class="text-center w-full bg-light text-dark font-bold p-2 rounded-md"
+              class="donate-now-btn text-center w-full bg-light text-dark font-bold p-2 rounded-md"
             />
           </div>
         </div>
@@ -210,38 +225,30 @@
       <!-- ---------------------------------------------------------------- -->
       <!-- ---------------------------------------------------------------- -->
 
-      <!-- ---------------------------------------------------------------- -->
-      <!-- Modal Design here!!  -->
+      <!-- -----------------Modal Design starts here!!-----------------  -->
       <section
-        class="hidden h-screen w-screen fixed top-0 left-0 bg-[#ffffff12] place-content-center"
+        class="hidden h-screen w-screen fixed top-0 left-0 bg-[#00000062] place-content-center"
+        id="modal"
       >
         <div
-          class="w-full max-w-md space-y-3 text-center bg-dark py-10 px-20 rounded-md"
+          class="w-full max-w-md space-y-4 text-center bg-dark py-10 px-20 rounded-lg"
         >
-          <h1 class="text-4xl font-black">Congrates</h1>
+          <h1 class="text-5xl font-black mb-4">Congrates</h1>
           <img src="./assets/coin.png" alt="" class="mx-auto" />
-          <p>You have donated for Humankind</p>
-          <h3>Successfully</h3>
-          <button class="bg-slate-200 text-black p-2 rounded-md">
+          <p class="">You have donated for Humankind</p>
+          <h3 class="text-lg font-semibold">Successfully</h3>
+          <button
+            class="bg-slate-200 text-black p-2 rounded-md font-medium text-sm"
+          >
             Close Confirmation
           </button>
         </div>
       </section>
-      <!-- Modal Design ends here!!  -->
-      <!-- ---------------------------------------------------------------- -->
+      <!-- -----------------Modal Design ends here!!-----------------  -->
 
       <!-- ---------------------------------------------------------------- -->
       <!-- history details starts here -->
-      <section id="history-details" class="hidden">
-        <div class="space-y-1 border-2 border-[#ffffff33] p-5 rounded-md">
-          <h4 class="text-lg font-bold">
-            96500 Taka is Donated for famine-2024 at Feni, Bangladesh
-          </h4>
-          <p>
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
-          </p>
-        </div>
-      </section>
+      <section id="history-details" class="hidden space-y-3"></section>
       <!-- history details ends here -->
       <!-- ---------------------------------------------------------------- -->
     </main>
